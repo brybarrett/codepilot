@@ -1,0 +1,18 @@
+css
+
+.json-key {
+    color: #aa0d91;
+    font-weight: bold
+}
+.json-string {
+    color: #008000;
+}
+.json-number{
+    color: #0000ff;
+}
+.json-boolean {
+    color: #aa0d91;
+}
+.json-null {
+    color: gray;
+}

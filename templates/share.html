@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Share Mode Header -->
+<div class="text-center mb-10">
+  <h1 class="text-4xl font-bold text-primary dark:text-accent mb-2">🌐 Welcome to CodePilot</h1>
+  <p class="text-lg text-secondary dark:text-gray-400">
+    A clean dev tool suite built with ❤️ during DevSurge — explore Regex, API Testing, and more.
+  </p>
+</div>
+
+<!-- Project Overview -->
+<div class="max-w-3xl mx-auto space-y-8 mb-10">
+
+  <!-- About the Creator -->
+  <section class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border border-gray-200 dark:border-gray-700">
+    <h2 class="text-xl font-semibold text-gray-800 dark:text-white mb-2">👤 About the Developer</h2>
+    <p class="text-gray-700 dark:text-gray-300">
+      Hi, I'm Bryan — a self-driven developer who built CodePilot from scratch during an intensive 14-day sprint. This tool combines practical dev utilities into a single, dark-mode friendly interface powered by Flask and Tailwind.
+    </p>
+    <p class="mt-2 text-gray-700 dark:text-gray-300">
+      It's part of my larger mission to land a role as a Junior Software Developer and build tools that actually help devs get shit done.
+    </p>
+  </section>
+
+  <!-- Tool Demos -->
+  <section class="space-y-6">
+
+    <!-- Regex Tool -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border border-gray-200 dark:border-gray-700">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">🔍 Regex Explainer</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">
+        Paste any regular expression and get a plain English explanation of what it does.
+      </p>
+      <a href="/regex" class="inline-block px-4 py-2 bg-primary text-white rounded-md hover:bg-indigo-700 transition">
+        Try Regex Tool →
+      </a>
+    </div>
+
+    <!-- API Tester -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border border-gray-200 dark:border-gray-700">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">📡 API Tester</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">
+        Instantly test REST APIs with custom headers, methods, and JSON payloads.
+      </p>
+      <a href="/api" class="inline-block px-4 py-2 bg-primary text-white rounded-md hover:bg-indigo-700 transition">
+        Try API Tester →
+      </a>
+    </div>
+
+    <!-- Bug Finder -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border border-gray-200 dark:border-gray-700">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">🪲 Bug Finder</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">
+        Paste an error message and get a suggested fix from GPT.
+      </p>
+      <a href="/bug" class="inline-block px-4 py-2 bg-primary text-white rounded-md hover:bg-indigo-700 transition">
+        Try Bug Finder →
+      </a>
+    </div>
+
+    <!-- Error Explainer -->
+    <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border border-gray-200 dark:border-gray-700">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-white mb-2">❗ Error Explainer</h3>
+      <p class="text-gray-600 dark:text-gray-300 mb-4">
+        Paste a Python traceback and get a breakdown of what went wrong and why.
+      </p>
+      <a href="/error" class="inline-block px-4 py-2 bg-primary text-white rounded-md hover:bg-indigo-700 transition">
+        Try Error Explainer →
+      </a>
+    </div>
+
+  </section>
+</div>
+
+<!-- Call to Action -->
+<div class="text-center py-6 border-t dark:border-gray-700">
+  <p class="text-sm text-gray-500 dark:text-gray-400">Built with Flask • Tailwind • OpenAI API • Deployed by Bryan S. Barrett</p>
+</div>
+{% endblock %}

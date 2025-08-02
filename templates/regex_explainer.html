@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Page Container -->
+<section class="w-full px-4 py-16 sm:px-6 lg:px-8 max-w-screen-lg mx-auto">
+
+  <!-- Header -->
+  <div class="text-center mb-12">
+    <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-4">
+      🧠 Regex Explainer
+    </h1>
+    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+      Break down any regular expression into plain English — instantly.
+    </p>
+  </div>
+
+  <!-- Form Card -->
+  <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 max-w-2xl mx-auto">
+    <form method="post" action="/regex">
+      <label for="pattern" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+        Regex Pattern
+      </label>
+      <input
+        type="text"
+        id="pattern"
+        name="pattern"
+        placeholder="e.g. ^[A-Z]{3}\\d{2}$"
+        required
+        class="w-full px-4 py-3 mb-6 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-orange-500"
+      >
+      <button
+        type="submit"
+        class="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-lg font-medium transition"
+      >
+        Explain Pattern
+      </button>
+    </form>
+  </div>
+
+  <!-- Result Cards -->
+  {% if pattern %}
+  <div class="grid gap-8 mt-12 max-w-3xl mx-auto">
+    <!-- Pattern Card -->
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">🔍 Pattern:</h3>
+      <pre class="bg-gray-100 dark:bg-gray-700 text-sm p-4 rounded-md border border-gray-200 dark:border-gray-600 overflow-x-auto">
+{{ pattern }}</pre>
+    </div>
+
+    <!-- Explanation Card -->
+    <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6">
+      <h3 class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2">💡 Explanation:</h3>
+      <pre class="bg-gray-100 dark:bg-gray-700 text-sm p-4 rounded-md border border-gray-200 dark:border-gray-600 overflow-x-auto">
+{{ explanation }}</pre>
+    </div>
+  </div>
+  {% endif %}
+
+</section>
+{% endblock %}

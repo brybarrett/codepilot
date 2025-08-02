@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CodePilot Test Home</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center max-w-screen-xl mx-auto px-6 py-4">
+    <div class="flex items-center space-x-2">
+      <img src="{{ url_for('static', filename='img/codepilot-logo.png') }}" alt="CodePilot Logo" class="h-8 w-auto" />
+      <span class="text-xl font-bold text-black">CodePilot</span>
+    </div>
+    <div class="flex items-center space-x-6">
+      <div class="relative group">
+        <button class="text-black hover:text-[#FF5F00]">Tools</button>
+        <div class="absolute hidden group-hover:block bg-white shadow-md mt-2 py-2 rounded">
+          <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Regex Explainer</a>
+          <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">API Tester</a>
+          <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Bug Finder</a>
+          <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">Error Helper</a>
+          <a href="#" class="block px-4 py-2 text-sm hover:bg-gray-100">XP Tracker</a>
+        </div>
+      </div>
+      <a href="#" class="text-black hover:underline">Log in</a>
+      <a href="#" class="bg-[#FF5F00] text-white px-4 py-2 rounded-md hover:bg-[#e04e00]">Sign up</a>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="flex flex-col items-center text-center max-w-2xl mx-auto mt-20 px-6 py-10">
+    <h1 class="text-4xl md:text-5xl font-bold text-[#1A1A1A] mb-4">
+      Code smarter, debug faster — with CodePilot
+    </h1>
+    <p class="text-lg text-[#4B5563] mb-6">
+      A dev utility toolbelt powered by GPT. Instantly test APIs, explain bugs, track progress, and more — all in one clean workspace.
+    </p>
+    <a href="#" class="bg-[#FF5F00] text-white px-6 py-3 rounded-md text-base font-medium hover:bg-[#e04e00]">
+      Try a tool now
+    </a>
+  </header>
+
+</body>
+</html>
